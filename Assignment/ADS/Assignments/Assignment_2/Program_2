@@ -1,0 +1,21 @@
+import java.util.*;
+class RemoveArrayDuplicate {
+    public static void main(String[] args) {
+        int[]a={1,2,1};
+        Arrays.sort(a);
+        for(int i=0; i<a.length;i++){
+            System.out.println(a[i]);
+        }
+        System.out.println("After Removing duplicate element.");
+         int[] unique=new int[a.length];
+         int j=0;
+        for(int i=0;i<a.length;i++){
+            if(i==0||a[i]!=a[i-1]){
+                unique[j++]=a[i];
+            }
+        }
+        int[]result=Arrays.copyOf(unique,j);
+        System.out.println(result.length);
+        
+    }
+}
