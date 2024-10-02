@@ -1,0 +1,15 @@
+public class Pr2 {
+	static boolean show(int n,int i) {
+		if(n%i==0) 
+			return false;
+			
+		if(i*i>n) 
+			return true;
+		
+		return show(n,i+1);
+	}
+	public static void main(String[] args) {
+		System.out.println(show(12,2));
+	}
+
+}
