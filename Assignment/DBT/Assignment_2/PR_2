@@ -1,0 +1,14 @@
+Q.2) What is the 4th column of the Customers table? 
+mysql> select rating from customers;
++--------+
+| rating |
++--------+
+|    100 |
+|    200 |
+|    200 |
+|    300 |
+|    100 |
+|    300 |
+|    100 |
++--------+
+7 rows in set (0.00 sec)
