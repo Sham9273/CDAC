@@ -1,0 +1,9 @@
+Q.2) Which field of the Customers table is the primary key?
+Ans--->
+        CREATE TABLE CUSTOMERS (
+            CNUM INT PRIMARY KEY,
+            CNAME VARCHAR(50),
+            CITY VARCHAR(50),
+            RATING INT,
+            SNUM INT
+        );
