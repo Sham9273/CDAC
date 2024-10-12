@@ -1,0 +1,11 @@
+Q.4) Why isn’t it possible to see the first five rows of a table?
+Ans--->
+  1) No Data in the Table: The table might be empty, so there are no rows to display.
+  
+  2) Incorrect SQL Query: The query used to retrieve the data might be incorrect. For example, if you're using a WHERE clause that filters out all rows, you'll see no results.
+  
+  3) Permissions: You might not have the necessary permissions to access the table or view its contents.
+  
+  4) Database Connection Issues: There could be problems with your database connection, preventing you from executing queries.
+  
+  5) Limitations of the SQL Client: Some SQL clients may have settings or limitations that affect how many rows are displayed.
