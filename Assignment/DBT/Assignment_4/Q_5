@@ -1,0 +1,16 @@
+Q.5) Write a query that will produce the snum values of all salespeople (suppress the 
+duplicates) with orders in the Orders table. 
+
+Ans--->
+
+mysql> select distinct snum from salespeople;
++------+
+| snum |
++------+
+| 1001 |
+| 1002 |
+| 1004 |
+| 1007 |
+| 1003 |
++------+
+5 rows in set (0.00 sec)
