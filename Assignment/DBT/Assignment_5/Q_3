@@ -1,0 +1,12 @@
+Q.3) Write a query on the Customers table whose output will exclude all customers 
+     with a rating <= 100, unless they are located in Rome. 
+Ans-->
+
+mysql> select * from customers
+    -> where rating<=100 and city='rome';
++------+---------+------+--------+------+
+| Cnum | Cname   | City | Rating | Snum |
++------+---------+------+--------+------+
+| 2007 | Pereira | Rome |    100 | 1004 |
++------+---------+------+--------+------+
+1 row in set (0.00 sec)
