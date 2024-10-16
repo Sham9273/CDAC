@@ -1,2 +1,8 @@
 Q.2) Write a query that selects all of the customers serviced by Peel or Motika. 
   (Hint: the snum field relates the two tables to one another).  
+Ans--->
+
+SELECT c.*
+FROM Customers c
+JOIN ServiceProviders s ON c.snum = s.snum
+WHERE s.provider_name IN ('Peel', 'Motika');
