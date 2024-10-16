@@ -1,0 +1,13 @@
+2) Write a query that will give you the names and cities of all salespeople in 
+   London with a commission above .10.   
+Ans-->
+
+mysql> select * from salespeople
+    -> where city='london' and comm>0.10;
++------+--------+--------+------+
+| Snum | Sname  | City   | Comm |
++------+--------+--------+------+
+| 1004 | MOTIKA | London | 0.11 |
+| 1001 | PEEL   | London | 0.14 |
++------+--------+--------+------+
+2 rows in set (0.00 sec)
