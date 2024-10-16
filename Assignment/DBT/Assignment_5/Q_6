@@ -1,0 +1,16 @@
+Q.6) What is a simpler way to write this query?   
+     Select snum, sname, city, comm From Salespeople              
+    where (comm > .12 OR comm <.14); 
+Ans-->
+
+mysql> select snum,sname,city,comm from salespeople
+    -> where comm>0.12 OR comm<0.14;
++------+---------+-----------+------+
+| snum | sname   | city      | comm |
++------+---------+-----------+------+
+| 1002 | SERRES  | San Jose  | 0.13 |
+| 1004 | MOTIKA  | London    | 0.11 |
+| 1007 | RIFKIN  | Barcelona | 0.15 |
+| 1003 | AXELROD | New York  | 0.10 |
+| 1001 | PEEL    | London    | 0.14 |
++------+---------+-----------+------+
