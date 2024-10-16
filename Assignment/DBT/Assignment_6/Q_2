@@ -1,0 +1,2 @@
+Q.2) Write a query that selects all of the customers serviced by Peel or Motika. 
+  (Hint: the snum field relates the two tables to one another).  
