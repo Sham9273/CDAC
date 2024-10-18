@@ -2,4 +2,13 @@ Q.2) Write a query that selects all of the customers serviced by Peel or Motika.
   (Hint: the snum field relates the two tables to one another).  
 Ans--->
 
- 
+ mysql> select * from customers
+    -> where snum in (select snum from salespeople
+    -> where sname='Peel' or sname='Motika');
++------+---------+--------+--------+------+
+| Cnum | Cname   | City   | Rating | Snum |
++------+---------+--------+--------+------+
+| 2001 | Hoffman | London |    100 | 1001 |
+| 2006 | Clemens | London |    100 | 1001 |
+| 2007 | Pereira | Rome   |    100 | 1004 |
++------+---------+--------+--------+------+
