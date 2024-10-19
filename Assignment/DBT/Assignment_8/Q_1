@@ -1,0 +1,6 @@
+Q.1) Assume each salesperson has a 12% commission. Write a query on the orders 
+table that will produce the order number, the salesperson number, and the amount 
+of the salesperson’s commission for that order.
+
+Ans--->
+
