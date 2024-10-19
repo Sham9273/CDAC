@@ -4,21 +4,14 @@ and the salesperson’s rate of commission.
 
 Ans--->
 
-mysql> select sname,cname,comm from orders o join salespeople s on s.snum=o.snum join customers c on s.snum=c.snum
+mysql> select sname,cname,comm from customers c join salespeople s on s.snum=c.snum
     -> where s.comm>0.12;
 +--------+----------+------+
 | sname  | cname    | comm |
 +--------+----------+------+
-| RIFKIN | Cisneros | 0.15 |
-| SERRES | Grass    | 0.13 |
-| SERRES | Liu      | 0.13 |
-| RIFKIN | Cisneros | 0.15 |
-| SERRES | Grass    | 0.13 |
-| SERRES | Liu      | 0.13 |
-| PEEL   | Clemens  | 0.14 |
 | PEEL   | Hoffman  | 0.14 |
-| SERRES | Grass    | 0.13 |
 | SERRES | Liu      | 0.13 |
+| SERRES | Grass    | 0.13 |
 | PEEL   | Clemens  | 0.14 |
-| PEEL   | Hoffman  | 0.14 |
+| RIFKIN | Cisneros | 0.15 |
 +--------+----------+------+
