@@ -3,12 +3,11 @@ city.  Exclude combinations of salespeople with themselves as well as duplicate
 rows with the order reversed.
 Ans--->
 
-mysql> select cname, city from customers
-    -> where rating=(select rating from customers where cname='Hoffman');
-+---------+--------+
-| cname   | city   |
-+---------+--------+
-| Hoffman | London |
-| Clemens | London |
-| Pereira | Rome   |
-+---------+--------+
+
+mysql> select m.sname,n.sname,m.city from salespeople m,salespeople n
+    -> where m.city=n.city and m.sname<n.sname;
++--------+-------+--------+
+| sname  | sname | city   |
++--------+-------+--------+
+| MOTIKA | PEEL  | London |
++--------+-------+--------+
