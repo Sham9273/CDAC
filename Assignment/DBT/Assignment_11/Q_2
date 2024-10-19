@@ -1,2 +1,13 @@
 Q.2) Write a query that produces the names and ratings of all customers who have 
 above-average orders.
+Ans--->
+
+mysql> select cname,rating from customers
+    -> where cnum in(select cnum from orders
+    -> where amt>(select avg(amt) from orders));
++---------+--------+
+| cname   | rating |
++---------+--------+
+| Liu     |    200 |
+| Clemens |    100 |
++---------+--------+
