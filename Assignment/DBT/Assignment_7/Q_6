@@ -1,0 +1,15 @@
+Q.6) Write a query that counts the number of salespeople registering orders for each 
+day. (If a salesperson has more than one order on a given day, he or she should be 
+counted only once.). 
+
+Ans--->
+mysql> select count(odate)|| 'TOTAL',odate from orders
+    -> group by odate;
++------------------------+------------+
+| count(odate)|| 'TOTAL' | odate      |
++------------------------+------------+
+|                      1 | 1990-10-03 |
+|                      1 | 1990-10-04 |
+|                      1 | 1990-10-05 |
+|                      1 | 1990-10-06 |
++------------------------+------------+
