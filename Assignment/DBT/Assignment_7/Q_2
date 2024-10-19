@@ -2,3 +2,10 @@ Q.2) Write a query that counts the number of different non-NULL city values in t
 Customers table.
 Ans--->
 
+mysql> select count(city) from customers
+    -> where city is not null;
++-------------+
+| count(city) |
++-------------+
+|           7 |
++-------------+
