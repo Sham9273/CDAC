@@ -1,0 +1,9 @@
+Q.5) Write a query that selects the highest rating in each city.
+Ans--->
+
+mysql> select max(rating) from customers;
++-------------+
+| max(rating) |
++-------------+
+|         300 |
++-------------+
