@@ -1,2 +1,17 @@
 Q.3) Write a query that lists customers in descending order of rating. Output the rating 
 field first, followed by the customer’s name and number.
+Ans--->
+
+mysql> select rating,cname,city,snum from customers
+    -> order by rating desc;
++--------+----------+----------+------+
+| rating | cname    | city     | snum |
++--------+----------+----------+------+
+|    300 | Grass    | Berlin   | 1002 |
+|    300 | Cisneros | San Jose | 1007 |
+|    200 | Giovanni | Rome     | 1003 |
+|    200 | Liu      | San Jose | 1002 |
+|    100 | Hoffman  | London   | 1001 |
+|    100 | Clemens  | London   | 1001 |
+|    100 | Pereira  | Rome     | 1004 |
++--------+----------+----------+------+
