@@ -2,3 +2,12 @@ Q.2) Write a query that produces the names and cities of all customers with the 
 rating as Hoffman.
 Ans--->
 
+mysql> select cname, city from customers
+    -> where rating=(select rating from customers where cname='Hoffman');
++---------+--------+
+| cname   | city   |
++---------+--------+
+| Hoffman | London |
+| Clemens | London |
+| Pereira | Rome   |
++---------+--------+
