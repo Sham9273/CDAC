@@ -1,0 +1,13 @@
+Q.4) Write a query that selects the first customer, in alphabetical order, whose name 
+begins with G.
+Ans--->
+
+mysql> select * from customers
+    -> where cname like 'G%'
+    -> order by cname;
++------+----------+--------+--------+------+
+| Cnum | Cname    | City   | Rating | Snum |
++------+----------+--------+--------+------+
+| 2002 | Giovanni | Rome   |    200 | 1003 |
+| 2004 | Grass    | Berlin |    300 | 1002 |
++------+----------+--------+--------+------+
