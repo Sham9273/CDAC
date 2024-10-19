@@ -1,3 +1,24 @@
 Q.2) Write a query that gives the names of both the salesperson and the customer for 
 each order along with the order number.
 Ans--->
+mysql> select sname,cname,onum from orders,customers,salespeople
+    -> where salespeople.snum=customers.snum and salespeople.snum=orders.snu
+m;
++---------+----------+------+
+| sname   | cname    | onum |
++---------+----------+------+
+| RIFKIN  | Cisneros | 3001 |
+| MOTIKA  | Pereira  | 3002 |
+| SERRES  | Grass    | 3005 |
+| SERRES  | Liu      | 3005 |
+| RIFKIN  | Cisneros | 3006 |
+| AXELROD | Giovanni | 3009 |
+| SERRES  | Grass    | 3007 |
+| SERRES  | Liu      | 3007 |
+| PEEL    | Clemens  | 3008 |
+| PEEL    | Hoffman  | 3008 |
+| SERRES  | Grass    | 3010 |
+| SERRES  | Liu      | 3010 |
+| PEEL    | Clemens  | 3011 |
+| PEEL    | Hoffman  | 3011 |
++---------+----------+------+
