@@ -1,3 +1,15 @@
 Q.2) Write a query on the Customers table that will find the highest rating in each city. 
 Put the output in this form: 
 For the city (city), the highest rating is : (rating).
+Ans -->
+
+mysql> select city as 'CITY',max(rating) as 'Highest Rating:' from customers
+    -> group by city;
++----------+-----------------+
+| CITY     | Highest Rating: |
++----------+-----------------+
+| London   |             100 |
+| Rome     |             200 |
+| San Jose |             300 |
+| Berlin   |             300 |
++----------+-----------------+
