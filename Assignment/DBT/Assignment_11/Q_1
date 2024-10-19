@@ -2,3 +2,12 @@ Q. 1) Write a query that uses a subquery to obtain all orders for the customer n
 Cisneros. Assume you do not know his customer number (cnum). 
 Ans--->
 
+mysql> select onum,cnum from orders
+    -> where cnum=(select cnum from customers
+    -> where cname='cisneros');
++------+------+
+| onum | cnum |
++------+------+
+| 3001 | 2008 |
+| 3006 | 2008 |
++------+------+
