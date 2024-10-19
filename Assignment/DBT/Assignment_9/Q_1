@@ -3,3 +3,18 @@ who made the order.
 
 Ans ---->
 
+mysql> select cname,onum from orders,customers
+    -> where customers.cnum=orders.cnum;
++----------+------+
+| cname    | onum |
++----------+------+
+| Cisneros | 3001 |
+| Pereira  | 3002 |
+| Liu      | 3005 |
+| Cisneros | 3006 |
+| Giovanni | 3009 |
+| Grass    | 3007 |
+| Clemens  | 3008 |
+| Grass    | 3010 |
+| Clemens  | 3011 |
++----------+------+
