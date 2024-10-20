@@ -1,0 +1,20 @@
+Q. 1) Create a union of two queries that shows the names, cities, and ratings of all 
+customers. Those with rating of 200 or greater will also have the words “High 
+Rating”, while the others will have the words “Low Rating”. 
+
+Ans--->
+
+mysql> select cname,city,rating 'High Rating' from customers
+    -> where rating>200
+    -> union
+    -> select cname,city,rating 'Low Rating' from customers
+    -> where rating<200;
++----------+----------+-------------+
+| cname    | city     | High Rating |
++----------+----------+-------------+
+| Grass    | Berlin   |         300 |
+| Cisneros | San Jose |         300 |
+| Hoffman  | London   |         100 |
+| Clemens  | London   |         100 |
+| Pereira  | Rome     |         100 |
++----------+----------+-------------+
