@@ -1,6 +1,16 @@
 Q. 1) Write a command that puts the following values, in their given order, into the 
 salespeople table: city – San Jose, name – Blanco, comm – NULL, cnum – 1100.
 Ans--->
+mysql> select * from salespeople;
++------+---------+-----------+------+
+| Snum | Sname   | City      | Comm |
++------+---------+-----------+------+
+| 1002 | SERRES  | San Jose  | 0.13 |
+| 1004 | MOTIKA  | London    | 0.11 |
+| 1007 | RIFKIN  | Barcelona | 0.15 |
+| 1003 | AXELROD | New York  | 0.10 |
+| 1001 | PEEL    | London    | 0.14 |
++------+---------+-----------+------+
 
 mysql> insert into salespeople values(1100,'Blanco','San Jose',null);
 Query OK, 1 row affected (0.01 sec)
