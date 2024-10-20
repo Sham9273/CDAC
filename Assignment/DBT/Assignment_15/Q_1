@@ -1,0 +1,18 @@
+Q. 1) Assume there is a table called Multicust, with all of the same column definitions 
+as Salespeople. Write a command that inserts all salespeople with more than one 
+customer into this table. 
+
+Ans--->
+mysql> create table Multicast as
+    -> select * from salespeople
+    -> where snum =any(select snum from customers
+    -> group by snum
+    -> having count(snum)>1);
+
+mysql> select * from multicast;
++------+--------+--------+------+
+| Snum | Sname  | City   | Comm |
++------+--------+--------+------+
+| 1004 | MOTIKA | London | 0.11 |
+| 1001 | PEEL   | London | 0.14 |
++------+--------+--------+------+
