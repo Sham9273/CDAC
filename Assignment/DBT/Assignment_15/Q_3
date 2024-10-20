@@ -1,0 +1,21 @@
+Q.3) Write a command that increases by twenty percent the commissions of all 
+salespeople with total orders above Rs. 3,000.
+
+Ans--->
+
+mysql> update salespeople
+    -> set comm=comm*1.20
+    -> where snum in(select snum from orders
+    -> where amt>3000);
+
+mysql> select * from salespeople;
++------+---------+-----------+------+
+| Snum | Sname   | City      | Comm |
++------+---------+-----------+------+
+| 1002 | SERRES  | San Jose  | 0.16 |
+| 1004 | MOTIKA  | London    | 0.11 |
+| 1007 | RIFKIN  | Barcelona | 0.15 |
+| 1003 | AXELROD | New York  | 0.10 |
+| 1001 | PEEL    | London    | 0.14 |
+| 1100 | Blanco  | San Jose  | NULL |
++------+---------+-----------+------+
